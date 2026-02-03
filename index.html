@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Umar Sharook Gurramkonda - Cybersecurity Engineer & Penetration Tester.">
+    <title>Umar Sharook | Cybersecurity Engineer</title>
+    
+    <!-- Google Fonts: Inter and Roboto Mono for Tech/Cyber feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">&lt;Umarsharook&gt;</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact" class="btn-primary">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero">
+        <div class="container hero-content">
+            <p class="greeting">Hello, I am</p>
+            <h1 class="glitch" data-text="Umar Sharook">Umar Sharook</h1>
+            <h2 class="role">Cybersecurity Engineer <span class="accent">&</span> <span id="typewriter"></span></h2>
+            <p class="tagline">Securing the digital frontier through offensive security and proactive defense.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+        <!-- Background Grid/Particles would go here via CSS/JS -->
+        <div class="hero-bg-overlay"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">01. <span class="title-text">About Me</span></h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I am an entry-level <strong>Cybersecurity Engineer</strong> with a strong foundation in penetration testing, vulnerability management, and network security. 
+                            I specialize in identifying and mitigating threats using industry-standard tools like <strong>Metasploit</strong>, <strong>Burp Suite</strong>, and <strong>Wireshark</strong>.
+                        </p>
+                        <p>
+                            Beyond offensive security, I am experienced in <strong>Python scripting</strong> for automation and security tool development. 
+                            My goal is to leverage my skills in offensive security to build robust defenses and secure critical infrastructure.
+                        </p>
+                        <ul class="quick-stats">
+                            <li><i class="fas fa-shield-alt"></i> Penetration Testing</li>
+                            <li><i class="fas fa-network-wired"></i> Network Security</li>
+                            <li><i class="fas fa-code"></i> Python Automation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">02. <span class="title-text">Technical Skills</span></h2>
+                
+                <div class="skills-grid">
+                    <!-- Offensive Security -->
+                    <div class="skill-card">
+                        <div class="icon-box"><i class="fas fa-bug"></i></div>
+                        <h3>Offensive Security</h3>
+                        <ul>
+                            <li>Penetration Testing</li>
+                            <li>Metasploit</li>
+                            <li>Burp Suite</li>
+                            <li>Hydra</li>
+                            <li>OWASP Top 10</li>
+                        </ul>
+                    </div>
+
+                    <!-- Network Defense -->
+                    <div class="skill-card">
+                        <div class="icon-box"><i class="fas fa-server"></i></div>
+                        <h3>Network Defense</h3>
+                        <ul>
+                            <li>Wireshark</li>
+                            <li>Snort</li>
+                            <li>Nmap</li>
+                            <li>SIEM</li>
+                            <li>IDS/IPS</li>
+                        </ul>
+                    </div>
+
+                    <!-- Development -->
+                    <div class="skill-card">
+                        <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Development</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>Bash Scripting</li>
+                            <li>Input Validation</li>
+                        </ul>
+                    </div>
+
+                     <!-- Platforms -->
+                     <div class="skill-card">
+                        <div class="icon-box"><i class="fab fa-linux"></i></div>
+                        <h3>Platforms</h3>
+                        <ul>
+                            <li>Linux (Kali, Ubuntu)</li>
+                            <li>Windows</li>
+                            <li>Virtualization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">03. <span class="title-text">Featured Projects</span></h2>
+                <div class="projects-grid">
+                    
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <i class="far fa-folder-open folder-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Umarsharook" target="_blank" aria-label="GitHub Link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Phishing URL Detector</h3>
+                        <p class="project-desc">
+                            Developed a machine learning classifier to detect phishing URLs with <strong>92% accuracy</strong>. 
+                            Engineered features such as domain age, URL length, and HTTPS presence to identify malicious links.
+                        </p>
+                        <ul class="project-tech-list">
+                            <li>Python</li>
+                            <li>Machine Learning</li>
+                            <li>Scikit-learn</li>
+                        </ul>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <i class="far fa-folder-open folder-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Umarsharook" target="_blank" aria-label="GitHub Link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Encryption Tool</h3>
+                        <p class="project-desc">
+                            Built a symmetric cryptography tool using Python to encrypt/decrypt sensitive data. 
+                            Implemented robust <strong>AES encryption</strong> standards to ensure data confidentiality and integrity.
+                        </p>
+                        <ul class="project-tech-list">
+                            <li>Python</li>
+                            <li>Cryptography</li>
+                            <li>AES</li>
+                        </ul>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <i class="far fa-folder-open folder-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Umarsharook" target="_blank" aria-label="GitHub Link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Web Vulnerability Scanner</h3>
+                        <p class="project-desc">
+                            Automated scanner aimed at identifying common web vulnerabilities.
+                            Scanned web apps for <strong>OWASP Top 10</strong> issues (SQLi, XSS, CSRF) integrating tools like OWASP ZAP and Burp Suite.
+                        </p>
+                        <ul class="project-tech-list">
+                            <li>Python</li>
+                            <li>OWASP ZAP</li>
+                            <li>Burp Suite</li>
+                        </ul>
+                    </article>
+
+                    <!-- Project 4 -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <i class="far fa-folder-open folder-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Umarsharook" target="_blank" aria-label="GitHub Link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Data Analytics Dashboard</h3>
+                        <p class="project-desc">
+                            Visualized Key Performance Indicators (KPIs) using Tableau. 
+                            Automated data pipelines via <strong>Python and SQL</strong> to streamline data ingestion and reporting.
+                        </p>
+                        <ul class="project-tech-list">
+                            <li>Tableau</li>
+                            <li>SQL</li>
+                            <li>Python</li>
+                        </ul>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Section -->
+        <section id="experience" class="section">
+            <div class="container two-col-grid">
+                
+                <!-- Experience -->
+                <div class="experience-col">
+                    <h2 class="section-title">04. <span class="title-text">Experience</span></h2>
+                    <div class="timeline">
+                        
+                        <!-- Job 2 -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Python Developer Intern</h3>
+                                <h4 class="timeline-company">Blackbucks <span class="timeline-date">Jan 2025 – May 2025</span></h4>
+                                <ul>
+                                    <li>Built and tuned LSTM time-series models, improving forecast accuracy by 18%.</li>
+                                    <li>Preprocessed and cleaned large datasets, reducing model bias by 15% and improving training efficiency.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                         <!-- Job 1 -->
+                         <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Network Security Intern</h3>
+                                <h4 class="timeline-company">Blackbucks <span class="timeline-date">May 2024 – Jul 2024</span></h4>
+                                <ul>
+                                    <li>Conducted penetration tests using Metasploit and Burp Suite, uncovering 12+ critical vulnerabilities.</li>
+                                    <li>Monitored over 5,000 packets using Wireshark and Snort, identifying potential threats.</li>
+                                    <li>Implemented 15+ firewall and IDS/IPS policies, reducing unauthorized access attempts by 30%.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Education & Certs -->
+                <div class="education-col">
+                    <h2 class="section-title">05. <span class="title-text">Education & Certs</span></h2>
+                    
+                    <div class="edu-card">
+                        <h3>S V College of Engineering</h3>
+                        <p class="edu-degree">B.Tech in Computer Science and Engineering</p>
+                        <p class="edu-date">May 2022 – May 2026</p>
+                        <p class="edu-meta">CGPA: 7.8 / 10</p>
+                    </div>
+
+                    <div class="cert-list">
+                        <h3>Certifications</h3>
+                        <ul>
+                            <li><i class="fas fa-certificate"></i> Foundations of Cybersecurity – Google (2024)</li>
+                            <li><i class="fas fa-certificate"></i> Vulnerability Management – Qualys (2024)</li>
+                            <li><i class="fas fa-certificate"></i> Python – HackerRank (2025)</li>
+                            <li><i class="fas fa-certificate"></i> SQL – HackerRank (2025)</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container contact-container">
+                <p class="contact-subtitle">What's Next?</p>
+                <h2 class="contact-title">Get In Touch</h2>
+                <p class="contact-text">
+                    I am currently looking for new opportunities as a Cybersecurity Engineer. 
+                    Whether you have a question or just want to say hi, my inbox is always open!
+                </p>
+                
+                <div class="contact-links">
+                    <a href="mailto:umarsharook0@gmail.com" class="btn btn-primary big-btn">Say Hello</a>
+                    <a href="https://linkedin.com/in/umar-sharook" target="_blank" class="contact-social"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/Umarsharook" target="_blank" class="contact-social"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+
+                <div class="resume-download">
+                    <!-- Note: User would need to add actual resume file here -->
+                    <a href="#" class="btn btn-outline small-btn"><i class="fas fa-download"></i> Download Resume</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Designed & Built by Umar Sharook</p>
+            <p class="copyright">&copy; 2025</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
