@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Umar Sharook | Cybersecurity Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #050816;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      background: rgba(0,255,170,0.08);
+      filter: blur(120px);
+      top: -100px;
+      left: -100px;
+      z-index: -1;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      background: rgba(0,153,255,0.08);
+      filter: blur(120px);
+      bottom: -100px;
+      right: -100px;
+      z-index: -1;
+    }
+
+    nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      backdrop-filter: blur(20px);
+      background: rgba(5,8,22,0.75);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-container {
+      max-width: 1300px;
+      margin: auto;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #00ffaa;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #d4d4d4;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #00ffaa;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 140px 40px 80px;
+    }
+
+    .hero-container {
+      max-width: 1300px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+      gap: 80px;
+      align-items: center;
+    }
+
+    .hero-left h1 {
+      font-size: 5rem;
+      line-height: 1;
+      margin-bottom: 20px;
+      font-weight: 900;
+    }
+
+    .hero-left h1 span {
+      color: #00ffaa;
+      display: block;
+    }
+
+    .hero-left p {
+      color: #b3b3b3;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 40px;
+      max-width: 650px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 16px 32px;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 700;
+      transition: 0.3s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg,#00ffaa,#00bbff);
+      color: black;
+      box-shadow: 0 10px 40px rgba(0,255,170,0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-4px) scale(1.02);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      border-color: #00ffaa;
+      color: #00ffaa;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 30px;
+      padding: 40px;
+      backdrop-filter: blur(20px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      background: rgba(0,255,170,0.12);
+      border-radius: 50%;
+      top: -80px;
+      right: -80px;
+      filter: blur(50px);
+    }
+
+    .hero-card h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .skill-bar {
+      margin-bottom: 25px;
+    }
+
+    .skill-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      color: #ddd;
+    }
+
+    .bar {
+      height: 10px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg,#00ffaa,#00bbff);
+      border-radius: 10px;
+      animation: fillBar 2s ease forwards;
+    }
+
+    @keyframes fillBar {
+      from { width: 0; }
+    }
+
+    section {
+      padding: 100px 40px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .section-title p {
+      color: #00ffaa;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .section-title h2 {
+      font-size: 3rem;
+      font-weight: 900;
+    }
+
+    .projects-grid {
+      max-width: 1300px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 30px;
+      transition: 0.4s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      border-color: #00ffaa;
+      box-shadow: 0 20px 60px rgba(0,255,170,0.12);
+    }
+
+    .project-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg,#00ffaa,#00bbff);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: black;
+      margin-bottom: 25px;
+      font-weight: 900;
+    }
+
+    .project-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .project-card p {
+      color: #b5b5b5;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .tag {
+      background: rgba(255,255,255,0.06);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: #ddd;
+    }
+
+    .project-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .small-btn {
+      padding: 12px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .github-btn {
+      background: #00ffaa;
+      color: black;
+    }
+
+    .github-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .demo-btn {
+      border: 1px solid rgba(255,255,255,0.12);
+      color: white;
+    }
+
+    .demo-btn:hover {
+      border-color: #00ffaa;
+      color: #00ffaa;
+    }
+
+    .skills-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .skill-chip {
+      padding: 18px 28px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    .skill-chip:hover {
+      transform: translateY(-5px);
+      border-color: #00ffaa;
+      color: #00ffaa;
+    }
+
+    .contact {
+      text-align: center;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .contact h2 {
+      font-size: 4rem;
+      margin-bottom: 25px;
+      font-weight: 900;
+    }
+
+    .contact p {
+      color: #b5b5b5;
+      line-height: 1.8;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      padding: 40px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: #777;
+    }
+
+    @media(max-width: 768px) {
+      .hero-left h1 {
+        font-size: 3.5rem;
+      }
+
+      .section-title h2 {
+        font-size: 2.2rem;
+      }
+
+      .contact h2 {
+        font-size: 2.5rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <div class="logo">UMAR SHAROOK</div>
+
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-container">
+
+      <div class="hero-left">
+        <h1>
+          Cybersecurity
+          <span>Engineer</span>
+        </h1>
+
+        <p>
+          Building offensive security tools, ransomware detection systems, automated scanners, and next-generation security solutions.
+          Focused on penetration testing, threat detection, Linux security, Python automation, and web application security.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="https://github.com/umarsharook" target="_blank" class="btn btn-primary">
+            View GitHub
+          </a>
+
+          <a href="mailto:umarsharook0@gmail.com" class="btn btn-secondary">
+            Hire Me
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Technical Strength</h3>
+
+        <div class="skill-bar">
+          <div class="skill-info">
+            <span>Threat Detection</span>
+            <span>92%</span>
+          </div>
+          <div class="bar">
+            <div class="bar-fill" style="width:92%"></div>
+          </div>
+        </div>
+
+        <div class="skill-bar">
+          <div class="skill-info">
+            <span>Web Security</span>
+            <span>88%</span>
+          </div>
+          <div class="bar">
+            <div class="bar-fill" style="width:88%"></div>
+          </div>
+        </div>
+
+        <div class="skill-bar">
+          <div class="skill-info">
+            <span>Python Automation</span>
+            <span>90%</span>
+          </div>
+          <div class="bar">
+            <div class="bar-fill" style="width:90%"></div>
+          </div>
+        </div>
+
+        <div class="skill-bar">
+          <div class="skill-info">
+            <span>Linux & Networking</span>
+            <span>94%</span>
+          </div>
+          <div class="bar">
+            <div class="bar-fill" style="width:94%"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-title">
+      <p>FEATURED PROJECTS</p>
+      <h2>Security Engineering Projects</h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-icon">R</div>
+
+        <h3>Ransomware Detection System</h3>
+
+        <p>
+          Advanced ransomware detection platform using behavioral analysis, suspicious encryption monitoring, and network anomaly detection.
+        </p>
+
+        <div class="tags">
+          <div class="tag">Python</div>
+          <div class="tag">AI</div>
+          <div class="tag">Threat Detection</div>
+          <div class="tag">Cybersecurity</div>
+        </div>
+
+        <div class="project-buttons">
+          <a href="https://github.com/umarsharook/Ransomware-Detection-System" target="_blank" class="small-btn github-btn">
+            GitHub Repo
+          </a>
+
+          <a href="https://github.com/umarsharook/Ransomware-Detection-System" target="_blank" class="small-btn demo-btn">
+            View Project
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">W</div>
+
+        <h3>Web Vulnerability Scanner</h3>
+
+        <p>
+          Automated vulnerability scanner capable of detecting SQL Injection, XSS, CSRF, and common web application vulnerabilities.
+        </p>
+
+        <div class="tags">
+          <div class="tag">Burp Suite</div>
+          <div class="tag">OWASP</div>
+          <div class="tag">Python</div>
+          <div class="tag">Web Security</div>
+        </div>
+
+        <div class="project-buttons">
+          <a href="https://github.com/umarsharook" target="_blank" class="small-btn github-btn">
+            GitHub Repo
+          </a>
+
+          <a href="https://github.com/umarsharook" target="_blank" class="small-btn demo-btn">
+            View Project
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">P</div>
+
+        <h3>Automated Port Scanner</h3>
+
+        <p>
+          High-speed automated reconnaissance scanner built with Bash scripting and Nmap for advanced service discovery and OS fingerprinting.
+        </p>
+
+        <div class="tags">
+          <div class="tag">Nmap</div>
+          <div class="tag">Bash</div>
+          <div class="tag">Linux</div>
+          <div class="tag">Networking</div>
+        </div>
+
+        <div class="project-buttons">
+          <a href="https://github.com/umarsharook" target="_blank" class="small-btn github-btn">
+            GitHub Repo
+          </a>
+
+          <a href="https://github.com/umarsharook" target="_blank" class="small-btn demo-btn">
+            View Project
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-title">
+      <p>SKILLS & TECHNOLOGIES</p>
+      <h2>Technical Arsenal</h2>
+    </div>
+
+    <div class="skills-container">
+      <div class="skill-chip">Penetration Testing</div>
+      <div class="skill-chip">Threat Detection</div>
+      <div class="skill-chip">Python Automation</div>
+      <div class="skill-chip">Burp Suite</div>
+      <div class="skill-chip">Wireshark</div>
+      <div class="skill-chip">Metasploit</div>
+      <div class="skill-chip">Snort</div>
+      <div class="skill-chip">Linux</div>
+      <div class="skill-chip">Kali Linux</div>
+      <div class="skill-chip">Networking</div>
+      <div class="skill-chip">Web Security</div>
+      <div class="skill-chip">OWASP</div>
+      <div class="skill-chip">SQL Injection</div>
+      <div class="skill-chip">XSS</div>
+      <div class="skill-chip">Cybersecurity</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <div class="section-title">
+        <p>LET'S CONNECT</p>
+        <h2>Ready To Secure The Future</h2>
+      </div>
+
+      <p>
+        Open for internships, cybersecurity engineering roles, security analyst opportunities,
+        and collaborations in offensive security and threat detection.
+      </p>
+
+      <div class="hero-buttons" style="justify-content:center;">
+        <a href="mailto:umarsharook0@gmail.com" class="btn btn-primary">
+          Email Me
+        </a>
+
+        <a href="https://github.com/umarsharook" target="_blank" class="btn btn-secondary">
+          GitHub Profile
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Umar Sharook • Cybersecurity Engineer Portfolio
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0px)';
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.project-card, .skill-chip, .hero-card').forEach(el => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(50px)';
+      el.style.transition = 'all 0.8s ease';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
